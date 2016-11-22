@@ -7,7 +7,7 @@
     <title>本周天氣</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
-        @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url("http://fonts.googleapis.com/earlyaccess/notosanstc.css");
         * {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -132,15 +132,15 @@
                         var M = myDate.getMonth() + 1;
                         var D = myDate.getDate();
                         var Day = myDate.getDay();
-                        if (Day == 0) {
-                            Day = "日";
-                        }
-
+                        // if (Day == 0) {
+                        //     Day = "日";
+                        // }
+                        var day = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
                       
                         var img_path = "http://openweathermap.org/img/w/";
                         
                         var c = "<div class='box'>"
-                        c += "<div class='date'>" + Y + "/" + M + "/" + D + " 星期" + Day + "</div>"
+                        c += "<div class='date'>" + Y + "/" + M + "/" + D  + day[Day] + "</div>"
                         c += "<div class='temp'><img src='temp.png'></div>"
                         c += "<div class='max'>" + parseInt(this.temp.max) + "&#8451;</div>"
                         c += "<div class='min'>" + parseInt(this.temp.min) + "&#8451;</div>"
